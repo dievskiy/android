@@ -16,13 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+package com.owncloud.android.data.migrations
 
-package com.owncloud.android.domain.user
+import androidx.room.migration.Migration
+import androidx.sqlite.db.SupportSQLiteDatabase
+import com.owncloud.android.data.ProviderMeta.ProviderTableMeta
 
-import com.owncloud.android.domain.user.model.UserInfo
-import com.owncloud.android.domain.user.model.UserQuota
-
-interface UserRepository {
-    fun getUserInfo(): UserInfo
-    fun getUserQuota(accountName: String): UserQuota
+val MIGRATION_29_30 = object : Migration(29, 30) {
+    override fun migrate(database: SupportSQLiteDatabase) {
+        //Nothing to migrate at the moment
+    }
 }
